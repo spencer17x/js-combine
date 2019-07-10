@@ -3,4 +3,4 @@
  * @param object
  * @returns {string}
  */
-export declare const combineUrlParams: (object: Object) => string;
+export declare const combineUrlParams: (object: object) => string;
