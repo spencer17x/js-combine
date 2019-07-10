@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    // "noImplicitAny": true, // 是否默认禁用 any
+    "removeComments": true // 是否移除注释
+  },
+  "exclude": [
+    "node_modules",
+    "tests/**/*"
+  ],
+  "types": [ // 默认引入的类型声明
+    "node" // 默认引入 node 的类型声明
+  ],
+  "baseUrl": ".", // 工作根目录
+  "outDir": "dist", // 输出目录
+  "declaration": true, // 是否自动创建类型声明
+  // 此配置生效范围
+  "include": [
+    "src/**/*"
+  ]
+}
