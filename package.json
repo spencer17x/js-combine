@@ -1,7 +1,7 @@
 {
   "name": "js-combine",
-  "version": "1.0.2",
-  "main": "dist/index.js",
+  "version": "1.0.3",
+  "main": "dist/js-combine.js",
   "types": "dist/index.d.ts",
   "description": "A JavaScript Tool",
   "author": "Code.X <1253478653@qq.com>",
