@@ -14,4 +14,6 @@ version: 新建一个版本后运行
 
 postversion: 新建版本后运行
 
+# 踩过的坑
 
+raw-loader, libraryExport, globalObject

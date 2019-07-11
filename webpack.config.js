@@ -5,14 +5,16 @@ const modName = 'js-combine';
 
 module.exports = {
   mode: "production",
-  entry: './src/index.ts',
+  entry: {
+    index: './src/index.ts',
+  },
   output: {
     filename: `${modName}.js`,
     library: modName,
     libraryTarget: 'umd',
     umdNamedDefine: true,
     path: path.resolve(__dirname, 'dist'),
-    // libraryExport: 'default', // 兼容 ES6(ES2015) 的模块系统、CommonJS 和 AMD 模块规范
+    // libraryExport: 'default', // 兼容 ES6(ES2015) 的模块系统、CommonJS 和 AMD 模块规范, 这个加了会导致引入不了，导致require的值为undefined
     globalObject: 'this' // 兼容node和浏览器运行，避免window is not undefined情况
   },
   resolve: {
@@ -20,7 +22,10 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.tsx?$/, use: ["raw-loader", "awesome-typescript-loader"] }
+      {
+        test: /\.tsx?$/,
+        use: ["awesome-typescript-loader"]
+      }
     ]
   },
   plugins: [
