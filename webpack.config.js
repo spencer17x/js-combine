@@ -1,4 +1,5 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const path = require('path');
 
 const modName = 'js-combine';
 
@@ -10,6 +11,7 @@ module.exports = {
     library: modName,
     libraryTarget: 'umd',
     umdNamedDefine: true,
+    path: path.resolve(__dirname, 'dist'),
     // libraryExport: 'default', // 兼容 ES6(ES2015) 的模块系统、CommonJS 和 AMD 模块规范
     globalObject: 'this' // 兼容node和浏览器运行，避免window is not undefined情况
   },
@@ -18,7 +20,7 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.ts?$/, use: ["awesome-typescript-loader", "raw-loader"] }
+      { test: /\.tsx?$/, use: ["raw-loader", "awesome-typescript-loader"] }
     ]
   },
   plugins: [
