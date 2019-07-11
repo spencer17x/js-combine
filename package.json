@@ -1,8 +1,11 @@
 {
   "name": "js-combine",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/js-combine.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "/dist/**/*"
+  ],
   "description": "A JavaScript Tool",
   "author": "Code.X <1253478653@qq.com>",
   "license": "MIT",
