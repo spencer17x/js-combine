@@ -1,11 +1,7 @@
 {
   "name": "js-combine",
-  "version": "1.0.6",
-  "main": "dist/main",
-  "types": "dist/index",
-  "files": [
-    "/dist/**/*"
-  ],
+  "version": "1.0.8",
+  "main": "dist/js-combine.js",
   "description": "A JavaScript Tool",
   "author": "Code.X <1253478653@qq.com>",
   "license": "MIT",
@@ -42,21 +38,6 @@
     "typescript": "^3.5.3",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5"
-  },
-  "jest": {
-    "rootDir": "tests",
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
   },
   "config": {
     "commitizen": {
