@@ -1,8 +1,8 @@
 {
   "name": "js-combine",
-  "version": "1.0.18",
-  "main": "dist/js-combine",
-  "types": "dist/index",
+  "version": "1.0.19",
+  "main": "dist/js-combine.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],

@@ -3,7 +3,7 @@
  * @param object
  * @returns {string}
  */
-export const combineUrlParams: (object: object) => string = (object: object = {}) => {
+export function combineUrlParams(object: object) {
   return Object.entries(object) // 生成二维数组
     .filter((arr: any[]) => arr[1]) // 过滤假值
     .map((arr: any[]) => arr.join('=')) // 拼接参数，转为一维数组
