@@ -1,7 +1,7 @@
 {
   "name": "js-combine",
-  "version": "1.0.29",
-  "main": "dist/index.js",
+  "version": "1.0.30",
+  "main": "dist/js-combine.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -12,7 +12,7 @@
   "scripts": {
     "test": "jest --config jestconfig.json",
     "start": "tsc -w",
-    "build": "rm -rf dist && tsc",
+    "build": "rm -rf dist && webpack --progress --colors",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "commit": "git-cz",
