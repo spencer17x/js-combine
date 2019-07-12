@@ -14,6 +14,6 @@ export const combineUrlParams: (object: object) => string = (object: object = {}
  * 合并className函数
  * @param args
  */
-export const combineClass: (...args: Array<string|undefined>) => string = (...args: Array<string|undefined>) => {
+export const combineClass: (...args: Array<string | undefined>) => string = (...args: Array<string | undefined>) => {
   return args.filter(Boolean).join(' ')
 }
