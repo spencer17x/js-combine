@@ -1,5 +1,13 @@
 language: node_js
 node_js:
   - '11.7.0'
+cache: yarn
 script:
+  - yarn lint
+  - yarn test
   - yarn build
+deploy:
+  provider: npm
+  email: '1253478653@qq.com'
+  api_key: 'xEHa_4v0WqQVUMsaP_z8Sw'
+  skip_cleanup: true
