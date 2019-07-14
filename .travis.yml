@@ -1,13 +1,28 @@
 language: node_js
 node_js:
   - '11.7.0'
-cache: yarn
-script:
-  - yarn lint
-  - yarn test
-  - yarn build
-deploy:
-  provider: npm
-  email: '1253478653@qq.com'
-  api_key: 'xEHa_4v0WqQVUMsaP_z8Sw'
-  skip_cleanup: true
+install:
+  - yarn
+stages:
+  - test
+  - name: deploy
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - echo "Testing Started ..."
+        - yarn test
+        - echo "Testing Finished."
+    - stage: deploy
+      script:
+        - echo "NPM Deploying Started ..."
+        - yarn build
+        - echo "NPM Building Finished."
+      deploy:
+        provider: npm
+        email: 1253478653@qq.com
+        api_key: '49a14e0a-afc9-4cb0-8b58-391c60e3f894'
+        skip_cleanup: true
+        on:
+          all_branches: true
