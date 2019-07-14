@@ -22,7 +22,7 @@ jobs:
       deploy:
         provider: npm
         email: 1253478653@qq.com
-        api_key: '49a14e0a-afc9-4cb0-8b58-391c60e3f894'
+        api_key: 'e54055d6-5d1d-45f6-b9eb-01fc6796e4e3'
         skip_cleanup: true
         on:
           all_branches: true
