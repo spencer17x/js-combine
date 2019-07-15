@@ -1,5 +1,7 @@
 # combine
 
+![](https://travis-ci.org/xuzpeng/combine.svg?branch=master)
+
 这是一个JavaScript工具库
 
 # npm 脚本
