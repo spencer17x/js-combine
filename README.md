@@ -36,3 +36,28 @@ preversion: 新建一个版本前运行
 version: 新建一个版本后运行
 
 postversion: 新建版本后运行
+
+# 使用方法
+
+combineClass 接受的类型为 string|undefined, 过滤掉undefined值
+
+combineUrlParams 接受的类型为 any, 过滤 undefined, null, NaN
+
+```shell
+yarn add js-combine
+```
+
+```js
+import { combineClass, combineUrlParams } from 'js-combine';
+// const { combineClass, combineClassUrlParams } = require('js-combine);
+const classList = [undefined, 'hello', 'world', 'a'];
+const urlParamsObject = {
+  a: 1,
+  b: null,
+  c: undefined,
+  d: 2
+}
+combineClass(...classList); // 'hello world a';
+combineUrlParams(urlParamsObject); // 'a=1&d=2'
+```
+
