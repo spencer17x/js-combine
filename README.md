@@ -1,6 +1,10 @@
 # combine
 
 ![](https://travis-ci.org/xuzpeng/combine.svg?branch=master)
+![GitHub top language](https://img.shields.io/github/languages/top/xuzpeng/combine.svg)
+![GitHub language count](https://img.shields.io/github/languages/count/xuzpeng/combine.svg)
+![NPM](https://img.shields.io/npm/l/js-combine.svg)
+
 
 这是一个JavaScript工具库
 
