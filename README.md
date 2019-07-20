@@ -21,7 +21,7 @@ $ chmod +x ./deploy.sh
 $ ./deploy.sh patch
 # 次要版本
 $ ./deploy.sh minor
-# 主斑斑
+# 主版本
 $ ./deploy.sh major
 ```
 
