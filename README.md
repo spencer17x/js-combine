@@ -47,6 +47,8 @@ ArrayUtils中的方法会默认进行一层浅拷贝，防止对原数组产生�
 
 CombineUtils.combineUrlParams中会过滤undefined, null, NaN 值
 
+UrlParser.getQueryString 第二个参数应写为location.search，为了在浏览器获取url参数
+
 ```ts
 import { ArrayUtils, CombineUtils, UrlParser } from '../src';
 const testArray: any[] = [1, '2', 'a', 4];
