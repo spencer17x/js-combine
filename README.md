@@ -40,3 +40,25 @@ preversion: 新建一个版本前运行
 version: 新建一个版本后运行
 
 postversion: 新建版本后运行
+
+# 使用说明
+
+ArrayUtils中的方法会默认进行一层浅拷贝，防止对原数组产生影响。
+
+CombineUtils.combineUrlParams中会过滤undefined, null, NaN 值
+
+```ts
+import { ArrayUtils, CombineUtils, UrlParser } from '../src';
+const testArray: any[] = [1, '2', 'a', 4];
+ArrayUtils.append(testArray, 5); // [1, '2', 'a', 4, 5]
+ArrayUtils.prepend(testArray, 'c'); // ['c', 1, '2', 'a', 4]
+ArrayUtils.insert(testArray, 1, 'ddd'); // [1, 'ddd', '2', 'a', 4]
+ArrayUtils.remove(testArray, 0); // ['2', 'a', 4]
+CombineUtils.combineUrlParams({a: 1, b: null, c: undefined}); // 'a=1'
+CombineUtils.combineClass('hello', undefined, 'world'); // 'hello world'
+UrlParser.getQueryString('b', '?a=1&b=2') // '2'
+```
+
+# PR [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+欢迎所有的贡献, 也欢迎提出建议, 使得该库更加完善, 有需要提供的函数可提在 issues 里面.
