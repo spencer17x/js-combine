@@ -12,5 +12,5 @@ export default {
       return unescape(r[2])
     }
     return null
-  }
-};
+  },
+}
