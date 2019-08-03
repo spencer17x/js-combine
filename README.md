@@ -47,12 +47,14 @@ combineClass 接受的类型为 string|undefined, 过滤掉undefined值
 
 combineUrlParams 接受的类型为 any, 过滤 undefined, null, NaN
 
+getQueryString 为从url中获取参数，参数name，urlSearch类型都为string, 浏览器环境下urlSearch应传location.search
+
 ```shell
 yarn add js-combine
 ```
 
 ```js
-import { combineClass, combineUrlParams } from 'js-combine';
+import { combineClass, combineUrlParams, getQueryString } from 'js-combine';
 // const { combineClass, combineClassUrlParams } = require('js-combine);
 const classList = [undefined, 'hello', 'world', 'a'];
 const urlParamsObject = {
@@ -63,5 +65,7 @@ const urlParamsObject = {
 }
 combineClass(...classList); // 'hello world a';
 combineUrlParams(urlParamsObject); // 'a=1&d=2'
+getQueryString(); // null
+getQueryString('a', '?a=1&b=2'); // '1'
+getQueryString('b', '?a=1&b=2'); // '2'
 ```
-
