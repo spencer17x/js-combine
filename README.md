@@ -31,6 +31,8 @@ $ ./deploy.sh major
 
 # npm 脚本
 
+package.json文件: 
+
 prepare: 发布前和用户安装前运行
 
 prepublishOnly: 发布前运行

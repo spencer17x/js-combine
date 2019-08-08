@@ -1,8 +1,5 @@
 import { CombineUtils } from '../src';
-
-interface IObject {
-  [propName: string]: any
-}
+import { IObject } from '../src/interface';
 
 describe('测试combineUrlParams', () => {
   test('不过滤布尔值', () => {
