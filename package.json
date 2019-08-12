@@ -1,6 +1,6 @@
 {
   "name": "js-combine",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "main": "dist/js-combine.js",
   "types": "dist/index.d.ts",
   "files": [
