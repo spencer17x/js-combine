@@ -15,11 +15,13 @@ export default {
     //     Reflect.deleteProperty(object, key)
     //   }
     // })
-    return JSON.parse(JSON.stringify(object, (k: string, v: any) => {
-      if (array.includes(v)) {
-        return undefined;
-      }
-      return v;
-    }));
+    return JSON.parse(
+      JSON.stringify(object, (k: string, v: any) => {
+        if (array.includes(v)) {
+          return undefined
+        }
+        return v
+      }),
+    )
   },
 }
